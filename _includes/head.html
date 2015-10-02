@@ -11,10 +11,42 @@
    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
 
    <!-- CSS -->
-        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lobster">
-        <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Lato:400,700'>
-        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lobster">
+  <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Lato:400,700'>
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
 
+
+  <script type="text/javascript">
+    var yearVal = 31536000000;
+    var monthVal = 2592000000;
+    var dayVal = 86400000;
+    var hourVal = 3600000;
+    var minuteVal = 60000;
+
+    function calcLapseDate()
+    {
+
+        // month starts from 0
+        var startDate = new Date("2014/11/11 2:33");
+        var myDate = new Date();
+
+        var offset = myDate.getTime() - startDate.getTime();
+        var offsetYear = parseInt(offset / yearVal);
+        var offsetMonth = parseInt((offset % yearVal) / monthVal);
+        var offsetDay = parseInt((offset % monthVal) / dayVal);
+        var offsetHour = parseInt((offset % dayVal) / hourVal);
+        var offsetMinute = parseInt((offset % hourVal) / minuteVal);
+
+        $('span.years').html(offsetYear);
+        $('span.months').html(offsetMonth);
+        $('span.days').html(offsetDay);
+        $('span.hours').html(offsetHour);
+        $('span.minutes').html(offsetMinute);
+    }
+
+    setTimeout("calcLapseDate()", 5);
+    setInterval("calcLapseDate()", 5000);
+  </script>
         
 </head>

@@ -93,6 +93,8 @@ a:hover { text-decoration: none; }
     text-shadow: 0 1px 5px rgba(0,0,0,.1);
 }
 
+.timer .years-wrapper,
+.timer .months-wrapper,
 .timer .days-wrapper,
 .timer .hours-wrapper,
 .timer .minutes-wrapper,
@@ -110,6 +112,8 @@ a:hover { text-decoration: none; }
     border-radius: 80px;
 }
 
+.timer .years-wrapper:hover,
+.timer .months-wrapper:hover,
 .timer .days-wrapper:hover,
 .timer .hours-wrapper:hover,
 .timer .minutes-wrapper:hover,
@@ -118,6 +122,8 @@ a:hover { text-decoration: none; }
     text-shadow: none;
 }
 
+.timer .years,
+.timer .months,
 .timer .days,
 .timer .hours,
 .timer .minutes,
@@ -258,6 +264,8 @@ a:hover { text-decoration: none; }
         padding-right: 0;
     }
 
+    .timer .years-wrapper,
+    .timer .months-wrapper,
     .timer .days-wrapper,
     .timer .hours-wrapper,
     .timer .minutes-wrapper,
@@ -271,6 +279,8 @@ a:hover { text-decoration: none; }
         border-radius: 70px;
     }
 
+    .timer .years,
+    .timer .months,
     .timer .days,
     .timer .hours,
     .timer .minutes,
@@ -315,6 +325,8 @@ a:hover { text-decoration: none; }
         padding: 0 20px;
     }
 
+    .timer .years-wrapper,
+    .timer .months-wrapper,
     .timer .days-wrapper,
     .timer .hours-wrapper,
     .timer .minutes-wrapper,
@@ -328,6 +340,8 @@ a:hover { text-decoration: none; }
         border-radius: 70px;
     }
 
+    .timer .years,
+    .timer .months,
     .timer .days,
     .timer .hours,
     .timer .minutes,
