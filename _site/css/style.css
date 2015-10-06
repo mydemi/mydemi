@@ -78,7 +78,7 @@ a:hover { text-decoration: none; }
     font-size: 40px;
     font-weight: 700;
     text-transform: uppercase;
-    font-family: "Hiragino Sans GB", "Microsoft YaHei";
+    font-family: "STHeiti Light", "Microsoft YaHei Light", "Microsoft YaHei";
     text-shadow: 0 1px 7px rgba(0,0,0,.2);
 }
 
@@ -133,6 +133,12 @@ a:hover { text-decoration: none; }
     line-height: 90px;
 }
 
+
+.poet span{
+    text-align: center;
+    font-family: "ChekiangSung474281";
+    font-size: 24px;
+}
 
 /***** Content *****/
 
