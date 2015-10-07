@@ -385,3 +385,18 @@ a:hover { text-decoration: none; }
 
 }
 
+#copyright {
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: -40px;
+    margin-top: 40px;
+    color: #7f8c97;
+}
+
+#copyright p span{
+    font-family: "yummy";
+}
+
+.cd-timeline-picture {
+    
+}
