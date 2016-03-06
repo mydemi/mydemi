@@ -1,2 +1,0 @@
-# mydemi
-guess who ~
