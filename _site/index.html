@@ -31,7 +31,7 @@
     {
 
         // month starts from 0
-        var startDate = new Date("2014/11/11 2:33");
+        var startDate = new Date("2014/12/11 2:33");
         var myDate = new Date();
 
         // var offset = myDate.getTime() - startDate.getTime();
@@ -55,6 +55,30 @@
         var nowHour = myDate.getHours();
         var nowMinute = myDate.getMinutes();
 
+        // true for 31days/month, false for 30days/month
+        var lastMonth = (nowMonth - 1 + 12) % 12;
+        var isBigMonth = false;
+        if (lastMonth == 1 || lastMonth == 3 || lastMonth == 5 || lastMonth == 7 || lastMonth == 8 || lastMonth == 10 || lastMonth == 12) 
+        {
+          isBigMonth = true;
+        };
+
+        var isFebrary = false;
+        if (lastMonth == 2) 
+        {
+          isFebrary = true;
+        };
+
+        var isLeapYear = false;
+        if (nowYear % 4 == 0)
+        {
+          isLeapYear = true;
+        };
+
+        /*
+          calc time diff
+        */
+
         if (nowMinute < startMinute) 
         {
           nowMinute += 60;
@@ -71,7 +95,19 @@
 
         if (nowDay < startDay) 
         {
-          nowDay += 30;
+          if (isBigMonth == true) {
+            nowDay += 31;
+          } else {
+            if (isFebrary == true) {
+              if (isLeapYear == true) {
+                nowDay += 29;
+              } else {
+                nowDay += 28;
+              }
+            } else {
+              nowDay += 30;
+            }
+          }
           nowMonth -= 1;
         }
         var offsetDay = nowDay - startDay;
@@ -92,7 +128,7 @@
         $('span.minutes').html(offsetMinute);
     }
 
-    setInterval("calcLapseDate()", 5000);
+    setInterval("calcLapseDate()", 1000);
     
   </script>
         
